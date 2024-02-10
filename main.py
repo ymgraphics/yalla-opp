@@ -4,7 +4,7 @@ from keep_alive import keep_alive
 
 keep_alive()
 # Create a Telegram Bot object
-bot = telebot.TeleBot("5834472319:AAH-Dl3vuG41wfs-Nu_e8yz-9tVJGp1ZoFU")
+bot = telebot.TeleBot("5834472319:AAFLaUXlaQkSekozcG-ZcUSj1ntUhQ-mxJg")
 
 
 @bot.message_handler(commands=['start'])
