@@ -1,3 +1,4 @@
 requests==2.26.0
 pyTelegramBotAPI
 Flask==2.0.2
+Werkzeug==0.16.1
