@@ -24,7 +24,7 @@ def handle_get_opportunity(message):
 
   if len(parts) == 2:
     committee_name = parts[1]
-    url = f"https://gis-api.aiesec.org/v2/committees/autocomplete?access_token=e0450832f933dc0f6e41e736cf42b5ee5ab62d12d7312bf7b8cc815af0ef9b7c&q={committee_name}&tag=MC"
+    url = f"https://gis-api.aiesec.org/v2/committees/autocomplete?access_token=797149ff3e2ee6a8abc4f101a77c714caf9463dcb69be8bd5d53e0698064aa91&q={committee_name}&tag=MC"
     response = requests.get(url)
     data = response.json()
 
@@ -44,9 +44,9 @@ def handle_get_opportunity(message):
   url = "https://gis-api.aiesec.org/v2/opportunities?access_token={ACCESS_TOKEN}&api_key={API_KEY}"
   params = {
     "access_token":
-    "e0450832f933dc0f6e41e736cf42b5ee5ab62d12d7312bf7b8cc815af0ef9b7c",
+    "797149ff3e2ee6a8abc4f101a77c714caf9463dcb69be8bd5d53e0698064aa91",
     "api_key":
-    "e0450832f933dc0f6e41e736cf42b5ee5ab62d12d7312bf7b8cc815af0ef9b7c",
+    "797149ff3e2ee6a8abc4f101a77c714caf9463dcb69be8bd5d53e0698064aa91",
     "q": query
   }
 
@@ -72,7 +72,7 @@ def handle_get_opportunity(message):
 
     # URL to get opportunity details
     opportunity_id = opportunity['id']
-    opportunity_url = f"https://gis-api.aiesec.org/v2/opportunities/{opportunity_id}?access_token=e0450832f933dc0f6e41e736cf42b5ee5ab62d12d7312bf7b8cc815af0ef9b7c"
+    opportunity_url = f"https://gis-api.aiesec.org/v2/opportunities/{opportunity_id}?access_token=797149ff3e2ee6a8abc4f101a77c714caf9463dcb69be8bd5d53e0698064aa91"
     opportunity_response = requests.get(opportunity_url)
 
     # Extract salary data from the response
@@ -86,7 +86,7 @@ def handle_get_opportunity(message):
 
     headers = {
       'Authorization':
-      'e0450832f933dc0f6e41e736cf42b5ee5ab62d12d7312bf7b8cc815af0ef9b7c'
+      '797149ff3e2ee6a8abc4f101a77c714caf9463dcb69be8bd5d53e0698064aa91'
     }
     queryv2 = '''
             query {{
