@@ -1,12 +1,13 @@
+import os
 import telebot
+import telegram
 import requests
 from keep_alive import keep_alive
 
 keep_alive()
 # Create a Telegram Bot object
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')  # No ${{ }} needed here
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
 bot = telegram.Bot(token=TELEGRAM_TOKEN)
-
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
@@ -14,7 +15,6 @@ def handle_start(message):
     message,
     "Hello! Make sure to put the text as: \n\n/getopp <field> in <country name>"
   )
-
 
 # Handle the "/getopportunity" command
 @bot.message_handler(commands=['getopp'])
@@ -130,4 +130,4 @@ def handle_get_opportunity(message):
 
   bot.send_message(message.chat.id, message_text)
   
-bot.infinity_polling()
+bot.polling()
