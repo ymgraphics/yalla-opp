@@ -4,7 +4,7 @@ from keep_alive import keep_alive
 
 keep_alive()
 # Create a Telegram Bot object
-TELEGRAM_TOKEN = os.environ.get('${{ secrets.TELEGRAM_TOKEN }}')
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')  # No ${{ }} needed here
 bot = telegram.Bot(token=TELEGRAM_TOKEN)
 
 
